@@ -2,7 +2,7 @@ import { Component , OnInit } from '@angular/core';
 import { products } from '../models';
 import { ProductsService } from '../services/products.service';
 import { ModalController } from '@ionic/angular';
-import { DetailproductComponent } from '../detailproduct/detailproduct.component';
+import { ProductModalPage } from '../product-modal/product-modal.page';
 
 @Component({
   selector: 'app-tab1',
@@ -23,8 +23,10 @@ export class Tab1Page implements OnInit {
 
   async detailProduct(id:number) {
     console.log(id);
+    var item= this._productsServices.products.find(p=>p.id===id);
     const modal = await this.modalController.create({
-      component: DetailproductComponent
+      component: ProductModalPage,
+      componentProps: {data:item}
     });
     return await modal.present();
   }

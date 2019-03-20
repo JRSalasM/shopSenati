@@ -1,9 +1,25 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>
-      Tab Two
-    </ion-title>
-  </ion-toolbar>
+    <ion-toolbar>
+        <ion-title>
+            Detalles del carrito
+        </ion-title>
+    </ion-toolbar>
 </ion-header>
 
-<ion-content></ion-content>
+<ion-content>
+    <ion-item *ngFor="let item of _listshopservice.listas">
+        <ion-thumbnail slot="start">
+            <img [src]="item.img">
+        </ion-thumbnail>
+        <ion-label>{{ item.name }}</ion-label>
+        <span>S/.{{ item.total}}</span>
+    </ion-item>
+
+</ion-content>
+<ion-content>
+    <ion-item>
+        <ion-label>Monto a pagar.</ion-label>
+        <strong>S/. {{ pagototal }}</strong>
+    </ion-item>
+    <ion-button expand="block" fill="outline">Pagar</ion-button>
+</ion-content>

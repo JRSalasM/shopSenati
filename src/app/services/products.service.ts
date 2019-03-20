@@ -12,15 +12,15 @@ export class ProductsService {
       name: "Tablet",
       details:"Detalle del producto",
       img:"assets/img/p1.jpg",
-      price: 800,
+      price: 1800,
       created_at: new Date()
     },
     {
       id: 1552977417821,
-      name: "Tablet",
+      name: "Memoria",
       details:"Detalle del producto",
       img:"assets/img/p2.jpg",
-      price: 800,
+      price: 300,
       created_at: new Date()
     },
     {

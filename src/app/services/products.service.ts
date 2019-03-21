@@ -12,63 +12,63 @@ export class ProductsService {
       name: "Tablet",
       details:"Detalle del producto",
       img:"assets/img/p1.jpg",
-      price: 1800,
+      price: 1000,
       created_at: new Date()
     },
     {
       id: 1552977417821,
-      name: "Memoria",
+      name: "Memoria SD 32GB",
       details:"Detalle del producto",
       img:"assets/img/p2.jpg",
-      price: 300,
+      price: 50,
       created_at: new Date()
     },
     {
       id: 1552977417822,
-      name: "Tablet",
+      name: "USB 16GB",
       details:"Detalle del producto",
       img:"assets/img/p3.jpg",
-      price: 800,
+      price: 30,
       created_at: new Date()
     },
     {
       id: 1552977417823,
-      name: "Tablet",
+      name: "Teclado Basico",
       details:"Detalle del producto",
       img:"assets/img/p4.jpg",
-      price: 800,
+      price: 25,
       created_at: new Date()
     },
     {
       id: 1552977417824,
-      name: "Tablet",
+      name: "Modem",
       details:"Detalle del producto",
       img:"assets/img/p5.jpg",
-      price: 800,
+      price: 90,
       created_at: new Date()
     },
     {
       id: 1552977417825,
-      name: "Tablet",
+      name: "Reloj",
       details:"Detalle del producto",
       img:"assets/img/p6.jpg",
-      price: 800,
+      price: 250,
       created_at: new Date()
     },
     {
       id: 1552977417826,
-      name: "Tablet",
+      name: "Visor VR",
       details:"Detalle del producto",
       img:"assets/img/p7.jpg",
-      price: 800,
+      price: 60,
       created_at: new Date()
     },
     {
       id: 1552977417827,
-      name: "Tablet",
+      name: "Selfie Stick",
       details:"Detalle del producto",
       img:"assets/img/p8.jpg",
-      price: 800,
+      price: 120,
       created_at: new Date()
     }
   ]

@@ -1,0 +1,23 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>Historial de la compra</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-list>
+        <ion-item *ngFor="let item of data">
+            <ion-avatar>
+                <img [src]="item.img" alt="">
+            </ion-avatar>
+            <ion-label>
+                <h3>{{ item.name }}</h3>
+                <p>Cantidad: {{ item.quantity }}</p>
+                <p>Precio: S/.{{ item.price }}</p>
+            </ion-label>
+        </ion-item>
+    </ion-list>
+</ion-content>
+<div>
+    <ion-button expand="block" fill="outline" (click)="close()">Regresar</ion-button>
+</div>

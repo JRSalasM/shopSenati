@@ -7,6 +7,7 @@ import { listshop } from '../models/listshop';
 export class ListshopService {
 
   listas: listshop[] = [];
+  totalpay:number = 0;
 
   constructor() {
     this.cargarStorage();
@@ -16,6 +17,7 @@ export class ListshopService {
   agregarLista( lista: listshop) {
     this.listas.push( lista );
     this.guardarStorage();
+    this.payTotal();
   }
   actualizarTodo( lista: any) {
     this.listas =  lista ;
@@ -26,10 +28,15 @@ export class ListshopService {
     if(localStorage.getItem('listshop')) {
 
       this.listas = JSON.parse(localStorage.getItem('listshop'));
-
+      this.payTotal();
     } else {
       this.listas = [];
     }
+  }
+  borrarTodo(){
+    this.listas = [];
+    this.guardarStorage();
+    this.payTotal();
   }
 
   borrarLista(lista: listshop) {
@@ -37,12 +44,20 @@ export class ListshopService {
       return listaData.id !== lista.id
     });
     this.guardarStorage();
+    this.payTotal();
   }
 
   guardarStorage() {
 
     localStorage.setItem('listshop', JSON.stringify(this.listas));
 
+  }
+  payTotal(){
+    this.totalpay = 0;
+    this.listas.forEach(e=>{
+      this.totalpay = this.totalpay + e.total
+    })
+    console.log(this.totalpay);
   }
 
 }

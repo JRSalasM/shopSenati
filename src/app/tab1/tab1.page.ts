@@ -15,7 +15,7 @@ export class Tab1Page implements OnInit {
 
   constructor( public _productsServices: ProductsService,
                public modalController: ModalController){
-    console.log(_productsServices.products);
+ 
   }
 
   ngOnInit() {
